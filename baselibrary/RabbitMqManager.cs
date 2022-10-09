@@ -16,10 +16,10 @@ public class RabbitMqManager
         Console.WriteLine(selectedPort);
         var connectionFactory = new ConnectionFactory()
         {
-            HostName = "localhost",
+            HostName = "localhost",//rabbitmq-0.host.docker.internal
             UserName = "guest",
             Password = "guest",
-            Port = selectedPort
+            Port = 5672
         };
         //   
         return connectionFactory.CreateConnection();
